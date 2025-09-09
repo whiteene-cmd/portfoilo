@@ -1,0 +1,38 @@
+#wrap{
+    max-width: 1400px;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+/* 공통 */
+.secIntro span{
+    font-size: 24px;
+    color: #0b0b6e;
+}
+.secIntro h2{
+    font-size: 48px;
+    color: #000;
+}
+.ico{
+    display: block;
+}
+.ico ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.ico ul li{
+    display: flex;
+    padding:  10px;
+    justify-content: flex-end;
+    align-items: end;
+    width: 44px; height: 44px;
+    border: 2px solid #0b0b6e;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.ico ul li span{
+    font-size: 16px;
+    font-weight: 600;
+    color: #0b0b6e;
+}
