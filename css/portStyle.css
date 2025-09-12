@@ -343,19 +343,28 @@ header .logo img{
 /* figma */
 
 #design>.secIntro{
+    position: relative;
     width: 100%;
     height: 70vh;
-    padding-bottom: 50px;
-    background-color: var(--bg2);
+    padding: 0 50px 50px 0;
+    box-sizing: border-box;
+    background:url(../img/배경탬플릿_1920.png);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
 }
 #design .figma{
     background: #FFE8D1;
     padding: 50px;
     overflow: hidden;
+}
+#design .secIntro .itemImg img{
+    position: absolute;
+    top: 50%; left: 20%;
+    transform: translate(-50px,-50%);
+    display: block;
+    width: 60%; height: 100%;
 }
 .figma .itemInfo{
     padding: 30px;
@@ -454,6 +463,9 @@ top: -650px; left: 550px;
     font-size: 28px;
     line-height: 2;
 }
+.proInfo h3 span{
+    color: #eaa3b;
+}
 .proInfo>p{
     font-size: 18px;
     padding-left: 15px;
@@ -469,3 +481,4 @@ top: -650px; left: 550px;
     display: flex;
     gap: 15px;
 }
+
