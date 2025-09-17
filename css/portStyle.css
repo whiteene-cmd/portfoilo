@@ -1,484 +1,695 @@
 :root {
-    --bg: #0b0b6e;   
-    --bg2: #FFE8D1;    
-    --panel: #111827;    
-    --text: #f8f8f8;    
-    --brand: #F4C73E;    
-    --brand-2: #F23054;    
-    --accent: #F95214; 
-    --hover:#137cad;   
+  --bg: #0b0b6e;
+  --bg2: #ffe8d1;
+  --panel: #111827;
+  --text: #f8f8f8;
+  --brand: #f4c73e;
+  --brand-2: #f23054;
+  --accent: #f95214;
+  --hover: #137cad;
 }
 
-#wrap{
-    max-width: 1400px;
-    background-color: var(--text);
-    margin: 0 auto;
+#wrap {
+  max-width: 1400px;
+  background-color: var(--text);
+  margin: 0 auto;
 }
 /* 공통 */
-.secIntro>span{
-    font-size: 36px;
-    font-family: "Playfair Display", serif;
-    color: var(--bg);
+.secIntro > span {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  color: var(--bg);
 }
-h2{
-    font-size: 48px;
-    font-family: "Playfair Display", serif;
-    color: #0b0b6e;
+h2 {
+  font-size: 54px;
+  font-family: "Playfair Display", serif;
+  color: #0b0b6e;
 }
-.ico{
-    display: inline-block;
+.ico {
+  display: inline-block;
 }
-.ico ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.ico ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.ico ul li{
-    display: flex;
-    padding:  10px;
-    justify-content: flex-end;
-    align-items: end;
-    width: 44px; height: 44px;
-    border: 2px solid #0b0b6e;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0);
+.ico ul li {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: end;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #0b0b6e;
+  color: var(--bg);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0);
 }
-.ico ul li span{
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--bg);
+.ico ul li span {
+  font-size: 16px;
+  font-weight: 600;
 }
-
 
 /* header */
 
-header{
-    position: sticky;
-    top: 0;
-    max-width: 100vw;
-    background: rgba(248, 248, 248,0.7);
-    backdrop-filter: blur(10px);
-    height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-    z-index: 10;
+header {
+  position: relative;
+  top: 0; right: 0; left: 0;
+  max-width: 100vw;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  transform: translateY(0);
+  z-index: 999;
 }
-header ul{
-    display: flex;
-    gap: 30px;
+header.is-hidden{
+  transform: translateY(-100%);
 }
-header ul li{
-    color: var(--panel);
-    font-size: 20px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-    cursor: pointer;
+header.is-scrolled{
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
 }
-header ul li:hover{
-    color: var(--hover);
+header ul {
+  display: flex;
+  gap: 30px;
 }
-header .logo{
-    width: 4.5%;
-    height: 80%;
+header ul li {
+  color: var(--panel);
+  font-size: 20px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
-header .logo img{
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+header ul li:hover {
+  color: var(--hover);
+}
+header .logo {
+  width: 4.5%;
+  height: 80%;
+}
+header .logo img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 /* mainVisual */
-#mainVisual{
-    width: 100%;
-    height: 920px;
+#mainVisual {
+  width: 100%;
+  height: 920px;
 }
-#mainVisual{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 100px;
-    background: url(../img/배경탬플릿_1920.png);
+#mainVisual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 100px;
+  background: url(../img/배경탬플릿_1920.png);
 }
-#mainVisual span{
-    font-size: 148px;
-    font-family: "Playfair Display", serif;
-    font-weight: 500;
-    line-height: 0.5;
-    color: var(--bg);
+#mainVisual span {
+  font-size: 148px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  line-height: 0.5;
+  color: var(--bg);
+}
+#mainVisual h2 {
+  font-size: 200px;
+  color: var(--bg);
+}
+#mainVisual h2 > span {
+  font-size: 148px;
+}
+#mainVisual figure {
+  position: absolute;
+  right: 20%;
+  bottom: 20%;
+  width: 300px;
+  height: 200px;
+  border-radius: 200px 150px 130px 100px;
+  background-color: var(--bg);
+}
 
-}
-#mainVisual h2{
-    font-size: 200px;
-    color: var(--bg);
-
-}
-#mainVisual h2>span{
-    font-size: 148px;
-}
+/* #mainVisual figure에 물방울 떠다니는 효과 */
+#mainVisual { position: relative; }
 #mainVisual figure{
-    position: absolute;
-    right: 20%; bottom: 20%;
-    width: 300px;
-    height: 200px;
-    border-radius: 200px 150px 130px 100px;
-    background-color: var(--bg);
+  overflow: visible; /* 방울이 바깥으로 나와도 보이게 */
 }
 
 /* aboutMe */
-#aboutMe{
-    width: 100%;
-    color: var(--text);
+#aboutMe {
+  width: 100%;
+  color: var(--text);
 }
-#aboutMe .profile{
-    background: linear-gradient(180deg, #111827 30%);
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 50px 100px;
+#aboutMe .profile {
+  background: linear-gradient(180deg, #111827 30%);
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 100px;
 }
-#aboutMe>div{
-    font-size: 20px;
-    line-height: 1.6;
+#aboutMe > div {
+  font-size: 20px;
+  line-height: 1.6;
 }
-#aboutMe>div h3{
-    font-size: 28px;
+#aboutMe > div h3 {
+  font-size: 28px;
 }
-#aboutMe .profile .profileMain{
-    width: 25%;
-    display: flex;
-    display: inline-block ;
-    flex-direction: column;
-    align-items: center;
+#aboutMe .profile .profileMain {
+  width: 25%;
+  display: flex;
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
 }
-.profile .profileMain h2{
-    color: #f8f8f8; 
-    margin-top: -15px;
-    text-align: center;
+.profile .profileMain h2 {
+  color: #f8f8f8;
+  margin-top: -15px;
+  text-align: center;
 }
-#aboutMe .profile .profileMain figure {text-align: center;}
-#aboutMe .profile .profileMain figure img{
-    width: 73%;
-    height: 73%;
-    border-radius: 50%;
-    margin-bottom: 15px;
+#aboutMe .profile .profileMain figure {
+  text-align: center;
 }
-#aboutMe .profileMain .proText{
-    line-height: 1.4;
+#aboutMe .profile .profileMain figure img {
+  width: 73%;
+  height: 73%;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
-#aboutMe .profileMain .proText span{
-    font-size: 18px;
+#aboutMe .profileMain .proText {
+  line-height: 1.4;
 }
-#aboutMe .profile .infomation{
-    display: flex;
-    gap: 50px;
+#aboutMe .profileMain .proText span {
+  font-size: 18px;
 }
-.left{
-    flex: 0 0 calc((100% - 30px) * 1/2);
+#aboutMe .profile .infomation {
+  display: flex;
+  gap: 50px;
+}
+.left {
+  flex: 0 0 calc((100% - 30px) * 1 / 2);
 }
 
-.experience li,.license li,.education li{
-    position: relative;
-    padding-left: 20px;
+.experience li,
+.license li,
+.education li {
+  position: relative;
+  padding-left: 20px;
 }
-.experience li::before,.license li::before,.education li::before{
-    position: absolute;
-    top: 50%; left: 0;
-    content: '';
-    display: block;
-    width: 4px; height: 4px;
-    background-color: var(--text);
-    border-radius: 50px;
+.experience li::before,
+.license li::before,
+.education li::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--text);
+  border-radius: 50px;
 }
-.experience{
-    margin-bottom: 80px;
+.experience {
+  margin-bottom: 80px;
 }
 .skills {
-    width:100%;
-    margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 30px;
 }
-.skills ul{
-    padding: 0 20px;
+.skills ul {
+  padding: 0 20px;
 }
-.skills ul li{
-    background-color: rgba(248, 248, 248,0.9);
+.skills ul li {
+  background-color: rgba(248, 248, 248, 0.9);
 }
-.education{
-    display: inline-block;
+.education {
+  display: inline-block;
 }
 
 /* strengh */
-.strength{
-    background: url(../img/배경탬플릿_1920.png);
-    padding: 50px;
-    text-align: center;
+.strength {
+  background: url(../img/배경탬플릿_1920.png);
+  padding: 50px;
+  text-align: center;
 }
-.strength h2{
-    margin-bottom: 50px;
+.strength h2 {
+  margin-bottom: 50px;
+  background: linear-gradient(180deg, #fff 30%, #152ab0 70%);
+  -webkit-background-clip: text; /* 크롬/사파리 */
+  background-clip: text; /* 파이어폭스 등 */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.5px #083877;
+  color: transparent;
 }
-.strWrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-} 
-.strWrap h3{
-    position: relative;
-    display: inline-block;
-    font-size: 28px;
-    border-radius: 28px;
-    border: 3px solid #083877;
-    padding: 10px 25px;
-    background-color: #f8f8f8;
-    margin-bottom: -28px;
-    cursor: pointer;
+.strWrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
 }
-.strWrap h3::after{
-    content: '';
-    margin-top: -14px;
-    display: block;
-    width: 0;
-    height: 14px;
-    background-color: #88DFF2;
-    transition: width 0.2s ease-in;
-    z-index: -10;
+.strWrap h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  border-radius: 28px;
+  border: 3px solid #083877;
+  padding: 10px 25px;
+  background-color: #f8f8f8;
+  margin-bottom: -28px;
+  cursor: pointer;
 }
-.strWrap h3:hover::after{
-    width: 100%;
+.strWrap h3::after {
+  content: "";
+  margin-top: -14px;
+  display: block;
+  width: 0;
+  height: 14px;
+  background-color: #88dff2;
+  transition: width 0.2s ease-in;
+  z-index: -10;
 }
-.strWrap .strText{
-    width: 200px;
-    height: 200px;
-    border: 4px solid #083877;
-    text-align: left;
-    word-break:keep-all;
-    font-size: 17px;
-    line-height: 1.5;
-    padding: 30px;
-    background-color: #f8f8f8;
-    border-radius: 5px;
+.strWrap h3:hover::after {
+  width: 100%;
 }
+.strWrap .strText {
+  width: 200px;
+  overflow: hidden;
+  border: 4px solid #083877;
+  text-align: left;
+  word-break: keep-all;
+  font-size: 17px;
+  line-height: 1.5;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease, color 0.8s ease, max-height 0.4s ease;
+}
+.strWrap .strText:hover{
+color: rgba(0, 0, 0, 1);
+box-shadow: 8px 10px 1px #152ab0;
+}
+
+
 
 /* clonecoding */
-#colneCoding{
-    position: relative;
-    padding: 50px;
+#colneCoding {
+  position: relative;
+  padding: 50px;
 }
-#colneCoding .secIntro{
-    padding: 50px;
-    background:url(../img/rbfy1.PNG);
-    height: 50vh;
-    text-align: center;
+#colneCoding .secIntro {
+  padding: 50px;
+  background: url(../img/rbfy1.PNG);
+  height: 50vh;
+  text-align: center;
 }
-#colneCoding>.secIntro>span{
-    color: #f8f8f8;
+#colneCoding > .secIntro > span {
+  color: #f8f8f8;
 }
-#colneCoding>.secIntro>h2{
-    color: #f8f8f8;
+#colneCoding > .secIntro > h2 {
+  color: #f8f8f8;
 }
-#colneCoding .ico{
-    margin: auto;
+#colneCoding .ico ul li{
+  margin: auto;
+  border-color: #fff;
+  color: var(--text);
 }
-.clone1, .clone2{
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: space-between;
-    align-items: center;
-    
+.clone1,
+.clone2 {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
 }
-.cloneText h3{
-    font-family: "Playfair Display", serif;
-    font-size: 32px;
+.cloneText h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
 }
-.cloneText p{
-    font-size: 20px;
-    margin-bottom: 20px;
+.cloneText p {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
-.clone1 .clo1Img1{
-    background: url(../img/Free_iPhone_&_MacBook_Pro_PSD_Mockup_3.png) no-repeat center/contain;
-    width: 600px; height: 400px;
-    margin-bottom: 100px;
+.clone1 .clo1Img1 {
+  background: url(../img/Free_iPhone_&_MacBook_Pro_PSD_Mockup_3.png) no-repeat
+    center/contain;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 100px;
 }
-.clone2 .clo2Img1{
-    background: url(../img/Free_iPhone_&_MacBook_Pro_PSD_Mockup_3.png) no-repeat center/contain;
-    margin-top: 50px;
-    width: 600px; height: 400px;
-    margin-bottom: 50px;
+.clone2 .clo2Img1 {
+  background: url(../img/Free_iPhone_&_MacBook_Pro_PSD_Mockup_3.png) no-repeat
+    center/contain;
+  margin-top: 50px;
+  width: 600px;
+  height: 400px;
+  margin-bottom: 50px;
 }
-.clone1 .clo1Img2{
-    background-color: #083877;
-    width: 650px;
-    height: 1000px;
-    margin: auto;
-
-}.clone2 .clo2Img2{
-    background-color: #083877;
-    width: 650px;
-    height: 1000px;
-    margin: auto;
+.clone1 .clo1Img2 {
+  background-color: #083877;
+  width: 650px;
+  height: 1000px;
+  margin: auto;
 }
-.moreBtn{
-    display: block;
-    width: 100%; height: 100%;
-    font-size: 18px;
-    text-align: center;
-    line-height: 18px;
-    padding: 15px 25px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: 2px solid #111827;
-    background-color: rgba(249, 82, 20,0);
+.clone2 .clo2Img2 {
+  background-color: #083877;
+  width: 650px;
+  height: 1000px;
+  margin: auto;
 }
-.moreBtn:hover{
-    border: 2px solid rgba(249, 82, 20,1);
-    background-color: rgba(249, 82, 20,1);
+.moreBtn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
+  padding: 15px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid #111827;
+  background-color: rgba(249, 82, 20, 0);
+}
+.moreBtn:hover {
+  border: 2px solid rgba(249, 82, 20, 1);
+  background-color: rgba(249, 82, 20, 1);
 }
 
 /* figma */
 
-#design>.secIntro{
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    padding: 0 50px 50px 0;
-    box-sizing: border-box;
-    background:url(../img/배경탬플릿_1920.png);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+#design > .secIntro {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  padding: 0 50px 50px 0;
+  box-sizing: border-box;
+  background: url(../img/배경탬플릿_1920.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
-#design .figma{
-    background: #FFE8D1;
-    padding: 50px;
-    overflow: hidden;
+#design .figma {
+  background: #ffe8d1;
+  padding: 50px;
+  overflow: hidden;
 }
-#design .secIntro .itemImg img{
-    position: absolute;
-    top: 50%; left: 20%;
-    transform: translate(-50px,-50%);
-    display: block;
-    width: 60%; height: 100%;
+#design .secIntro .itemImg img {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50px, -50%);
+  display: block;
+  width: 60%;
+  height: 100%;
 }
-.figma .itemInfo{
-    padding: 30px;
-    width: 25%;
-    height: auto;
-    border: 2px solid #F23054;
-    border-radius: 10px;
+.figma .itemInfo {
+  padding: 30px;
+  width: 25%;
+  height: auto;
+  border: 2px solid #f23054;
+  border-radius: 10px;
 }
-.figma .itemInfo h3{
-    font-size: 32px;
-    text-align: center;
-    color:var(--brand-2);
-    margin-bottom: 30px;
-    text-shadow: 1px 4px 3px rgba(0, 0, 0, 0.3);
+.figma .itemInfo h3 {
+  font-size: 32px;
+  text-align: center;
+  color: var(--brand-2);
+  margin-bottom: 30px;
+  text-shadow: 1px 4px 3px rgba(0, 0, 0, 0.3);
 }
-.figma .itemInfo h3>span{
-    color: var(--text);
+.figma .itemInfo h3 > span {
+  color: var(--text);
 }
-.figma .itemInfo p{
-    font-size: 16px;
-    color: #8C4A23;
-    margin-bottom: 30px;
+.figma .itemInfo p {
+  font-size: 16px;
+  color: #8c4a23;
+  margin-bottom: 30px;
 }
-.figma .itemInfo strong{
-    color: #8C4A23;
-    font-size: 24px;
-    line-height: 2;
+.figma .itemInfo strong {
+  color: #8c4a23;
+  font-size: 24px;
+  line-height: 2;
 }
-.color ul{
-    display: flex;
-    justify-content: center;
+.color ul {
+  display: flex;
+  justify-content: center;
 }
-.color ul li{
-    margin-left: -15px;
+.color ul li {
+  margin-left: -15px;
 }
-.color ul li figure{
-    width: 70px; height: 70px;
-    border-radius: 50%;
+.color ul li figure {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
-.itemImgMore{
-position: relative;
-width: 1000px;
-top: -650px; left: 550px;
+.itemImgMore {
+  position: relative;
+  width: 1000px;
+  top: -650px;
+  left: 550px;
 }
-.itemImgMore img{
-    width: 270px; height: 520px;
-    margin-left: 150px;
-    transform: rotate(45deg);
+.itemImgMore img {
+  width: 270px;
+  height: 520px;
+  margin-left: 150px;
+  transform: rotate(45deg);
 }
-.itemImgMore .login{
-    position: absolute;
-    top: 74%; right: 54%;
+.itemImgMore .login {
+  position: absolute;
+  top: 74%;
+  right: 54%;
 }
-.component{
-    width: 100%;
-    display: block;
-    margin-top: -350px;
+.component {
+  width: 100%;
+  display: block;
+  margin-top: -350px;
 }
 /* POSTERS */
-.posters{
-    padding: 50px;
-    text-align: center;
-    background: url(../img/배경탬플릿_1920.png);
+.posters {
+  padding: 50px;
+  text-align: center;
+  background: url(../img/배경탬플릿_1920.png);
 }
-.posters h2{
-    margin-bottom: 20px;
+.posters h2 {
+  margin-bottom: 20px;
 }
-.posters>p{
-    font-size: 18px;
-    margin-bottom: 100px;
+.posters > p {
+  font-size: 18px;
+  margin-bottom: 100px;
 }
-.posters .posterpack{
-    display: flex;
-    gap: 30px;
+.posters .posterpack {
+  display: flex;
+  gap: 30px;
 }
-.posters img{
-    display: block;
-    width: 400px; height: 400px;
-    background-color: #083877;
-}
-/* project */
-#project{
-    position: relative;
-    padding: 50px;
-    
-}
-#project .secIntro{
-    height: 50vh;
-}
-#project .ico{
-    position: absolute;
-    top: 15%; right: 5%;
-}
-.proInfo h3{
-    font-size: 28px;
-    line-height: 2;
-}
-.proInfo h3 span{
-    color: #eaa3b;
-}
-.proInfo>p{
-    font-size: 18px;
-    padding-left: 15px;
-}
-.proInfo .point{
-    margin-bottom: 30px;
-}
-.proInfo .more p{
-    font-size: 24px;
-    font-weight: 600;
-}
-.proInfo .linkIco{
-    display: flex;
-    gap: 15px;
+.posters img {
+  display: block;
+  width: 400px;
+  height: 400px;
+  background-color: #083877;
 }
 
+
+
+/* project */
+#project {
+  position: relative;
+}
+#project .secIntro {
+height: 100vh;
+  padding: 50px;
+}
+#project .ico {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+}
+.proInfo .probg{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.proInfo figure{
+    width: 50vw;
+    height: 100vh;
+    background: url(../img/login_banner.png) no-repeat center/cover;
+}
+.proInfo .proText{
+  padding: 50px;
+
+}
+.proInfo h3 {
+  font-size: 36px;
+  line-height: 2;
+}
+.proInfo h3 span {
+  color: #D33A3C;
+}
+.proInfo p {
+  font-size: 20px;
+  padding-left: 15px;
+  line-height: 1.6;
+}
+.proInfo .point {
+  margin-bottom: 30px;
+}
+.proInfo .more strong {
+    display: block;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.proInfo .linkIco {
+    width: 100%;
+}
+
+.proInfo .linkIco a{
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    text-decoration: underline;
+    color: var(--hover);
+    font-style: italic; 
+}
+.proInfo .linkIco a:hover{
+    text-decoration: underline;
+    color: var(--accent);
+    font-style: italic; 
+}
+.proInfo .linkIco img{
+padding: 5px 15px;
+width: 5%;
+}
+
+.girtaPoint{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+.girtaPoint .sideText{
+    position: relative;
+    font-size: 30px;
+    height: 100%;
+    padding: 0 30px;
+    color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.girtaPoint .sideText::before,.girtaPoint .sideText::after{
+    content: '';
+    display: block;
+    width: 4px; height: 150px;
+   background-color: var(--bg);
+}
+.girtaPoint .sideText::before{
+    position: absolute;
+    left: 50%; top: 15%;
+    transform: translateX(-50%);
+}
+.girtaPoint .sideText::after{
+    position: absolute;
+    left: 50%; bottom: 15%;
+    transform: translateX(-50%);
+}
+.girtaInfo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/배경탬플릿_1920.png) no-repeat center/cover;
+}
+.girta{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+}
+.girta h3{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--bg);
+}
+.girta h3 span{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent);
+}
+.girta p{
+    padding: 20px;
+    display: block;
+    border-radius: 15px;
+    line-height: 1.6;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+}
+.girta .sol3 p{
+    font-family: 'JoseonPalace';
+    font-size: 72px;
+    font-weight: 500;
+    text-align: center;
+}
+.girta .problem{
+    height: 200px;
+    margin-bottom: 30px;
+}
+.girta .problem::after{
+    content: '';
+
+}
+
+
+footer{
+    max-width: 100vw;
+    background-color: #111827;
+    color: var(--text);
+    padding: 30px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+footer .address .sns{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+footer .address .sns li a{
+    display: flex;
+    gap: 5px;
+}
+footer .address .sns .github{
+    display: block;
+    width: 24px; height: 24px;
+    background: url(https://images.freeimages.com/fic/images/icons/2779/simple_icons/4096/github.png?h=350) no-repeat center/cover;
+}
+footer .address .sns .notion{
+    display: block;
+    width: 24px; height: 24px;
+    background: url(https://blog.kakaocdn.net/dna/J7j5k/btrZz5nxubh/AAAAAAAAAAAAAAAAAAAAAKXGuFjNUzCpUj-8Wpzx0p9yDA8wRhyVeCPBFQJl34l-/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1759244399&allow_ip=&allow_referer=&signature=7BaTYJJmFPfmqawfntlqeQBrrzI%3D) no-repeat center/cover;
+}
+footer .address .sns .slack{
+    display: block;
+    width: 24px; height: 24px;
+    background: url(https://blog.kakaocdn.net/dna/dcegyt/btsIHbYTQb1/AAAAAAAAAAAAAAAAAAAAAM7ZKSig9jAuk4wVvRQJphcFSzqO-0bkqW0Jw6BKPwia/img.png?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1759244399&allow_ip=&allow_referer=&signature=zTyYCriT%2F16ho9UFq8PL8tiqSNU%3D) no-repeat center/cover;
+}
+
+footer .logo_f a{
+    display: block;
+    width: 124px; height: 124px;
+    border-radius: 50%;
+    background: url(../img/profile.png) no-repeat center/cover;
+}
