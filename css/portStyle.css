@@ -556,6 +556,10 @@ box-shadow: 8px 10px 1px #152ab0;
   top: 74%;
   right: 54%;
 }
+.itemImgMore .newlogin{
+  position: absolute;
+  top: 60%; right: 5%;
+}
 .component {
   width: 100%;
   display: block;
@@ -698,7 +702,7 @@ width: 5%;
 }
 
 .girtaPoint{
-    height: 60vh;
+    height: 70vh;
     display: flex;
     align-items: center;
 }
@@ -715,7 +719,7 @@ width: 5%;
 .girtaPoint .sideText::before,.girtaPoint .sideText::after{
     content: '';
     display: block;
-    width: 4px; height: 150px;
+    width: 4px; height: 180px;
    background-color: var(--bg);
 }
 .girtaPoint .sideText::before{
@@ -732,8 +736,8 @@ width: 5%;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-
+    align-items: flex-start;
+    background-color: var(--brand-2);
 }
 .girta{
     display: grid;
@@ -745,14 +749,17 @@ width: 5%;
 .girta h3{
     font-size: 28px;
     text-align: center;
+    margin-top: 30px;
     margin-bottom: 30px;
     color: var(--bg);
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1.5px;
 }
 .girta h3 span{
     font-size: 36px;
     text-align: center;
     margin-bottom: 30px;
-    color: var(--accent);
+    color: var(--brand-2);
 }
 .girta p{
     padding: 20px;
@@ -763,6 +770,9 @@ width: 5%;
     border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
     font-size: 18px;
+}
+.girta .sol{
+  padding-top: 30px;
 }
 .girta .sol3 p{
     font-family: 'JoseonPalace';
